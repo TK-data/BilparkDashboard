@@ -22,7 +22,7 @@ deploy:
   provider: surge
   skip_cleanup: true
   domain: bilpark-dashboard.surge.sh
-  project: ./build/
+  project: ./bpdashboard/build/
 on:
   branch: master
 
