@@ -18,6 +18,14 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: bilpark-dashboard.surge.sh
+  project: ./build/
+on:
+  branch: master
+
 notifications:
   email: false
   slack:
