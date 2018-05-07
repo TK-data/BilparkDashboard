@@ -8,9 +8,15 @@ cache:
 before_install:
   - cd bpdashboard
 
+before_scrip:
+  - npm install -g exp
+
 script:
   - npm test
   - npm run build
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email: false
