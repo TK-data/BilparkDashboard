@@ -12,7 +12,7 @@ script:
   - npm test
   - npm run build
 
-  notifications:
+notifications:
   email: false
   slack:
     rooms:
