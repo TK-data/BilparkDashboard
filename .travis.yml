@@ -4,6 +4,16 @@ node_js:
 cache:
   directories:
     - node_modules
+
+before_install:
+  - cd bpdashboard
+
 script:
   - npm test
   - npm run build
+
+  notifications:
+  email: false
+  slack:
+    rooms:
+      - bachelor-it2901:GvHs8vnnvxJB8Rfb78EuRnJ8#travis
