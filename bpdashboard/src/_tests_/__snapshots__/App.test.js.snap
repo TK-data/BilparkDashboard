@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should render 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="car.png"
+    />
+    <h1
+      className="App-title"
+    >
+      Velkommen til Bilparken!
+    </h1>
+  </header>
+  <div
+    className="App-intro"
+  />
+  <header>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/about-us"
+      onClick={[Function]}
+    >
+      About
+    </a>
+  </header>
+  <main>
+    <form
+      className="loginContainer"
+      name="login"
+      onSubmit={[Function]}
+    >
+      <input
+        className="userInput"
+        placeholder="Brukernavn"
+        required="required"
+        type="text"
+      />
+      <input
+        className="userInput"
+        placeholder="Passord"
+        required="required"
+        type="password"
+      />
+      <button
+        className="loginButton"
+      >
+        <div
+          className="buttonText"
+        >
+          Logg inn
+        </div>
+      </button>
+    </form>
+  </main>
+</div>
+`;
