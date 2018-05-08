@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
+import Login from './login/Login';
+import LoginTest from './login2/Logintest';
 import logo from './car.png';
 import './../styles/App.css';
-import Login from './login/Login';
 class App extends Component {
 
   render() {
@@ -12,8 +14,16 @@ class App extends Component {
           <h1 className="App-title">Velkommen til Bilparken!</h1>
         </header>
         <div className="App-intro">
-          <Login/>
         </div>
+        <header>
+          <Link to="/">Home</Link>
+          <Link to="/about-us">About</Link>
+        </header>
+
+        <main>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/about-us" component={LoginTest} />
+        </main>
       </div>
     );
   }
