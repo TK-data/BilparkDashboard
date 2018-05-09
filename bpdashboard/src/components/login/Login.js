@@ -2,6 +2,7 @@ import React from 'react';
 import { push } from 'react-router-redux'
 import { connect } from 'react-redux'
 import './../../styles/login.css';
+import logo from './../car.png';
 import { postUser, postCurrent, loginMail } from '../../actions/auth';
 
 
@@ -21,10 +22,18 @@ class Login extends React.Component {
 
   render(){
     return(
-      <div name="login" className="loginContainer" >
-        <input className="userInput" type="text" placeholder="Brukernavn" required="required" />
-        <input className="userInput" type="password" placeholder="Passord" required="required" />
-        <button className="loginButton" onClick={this.handleSubmit}><div className="buttonText">Logg inn</div></button>
+      <div>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Velkommen til Bilparken!</h1>
+        </header>
+        <div className="App-intro">
+        </div>
+        <div name="login" className="loginContainer" >
+          <input className="userInput" type="text" placeholder="Brukernavn" required="required" />
+          <input className="userInput" type="password" placeholder="Passord" required="required" />
+          <button className="loginButton" onClick={this.handleSubmit}><div className="buttonText">Logg inn</div></button>
+        </div>
       </div>
     )
   }

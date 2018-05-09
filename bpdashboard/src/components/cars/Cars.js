@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import './../../styles/login.css';
 
 
-class LoginTest extends React.Component {
+class Cars extends React.Component {
 
   render(){
     return(
@@ -23,4 +23,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
   null,
   mapDispatchToProps
-)(LoginTest)
+)(Cars)
