@@ -1,4 +1,5 @@
 import { API_ADDRESS } from '../config/connections';
+import { push } from 'react-router-redux';
 
 const axios = require('axios');
 
@@ -80,7 +81,7 @@ export function postUser(username, password) {
       .then((user) => {
         dispatch(postUserSuccess(user));
         dispatch(registerUserValues({}));
-        dispatch(loginMail({}));
+        dispatch(push('/admin'));
         dispatch(loginResetFormOptions());
         dispatch(loginSuccess());
       })

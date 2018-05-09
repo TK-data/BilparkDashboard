@@ -1,32 +1,56 @@
 import React from 'react';
 import { push } from 'react-router-redux'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import './../../styles/login.css';
+import { postUser, postCurrent, loginMail } from '../../actions/auth';
 
 
 class Login extends React.Component {
 
+  constructor(){
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
   handleSubmit(){
-    console.log("Submitted");
+    const userValue = document.querySelectorAll('.userInput');
+    if (userValue[0].value && userValue[1].value.length > 7) {
+      this.props.postUser(userValue[0].value, userValue[1].value);
+    }
   }
 
   render(){
     return(
-      <form name="login" className="loginContainer" onSubmit={this.handleSubmit}>
+      <div name="login" className="loginContainer" >
         <input className="userInput" type="text" placeholder="Brukernavn" required="required" />
         <input className="userInput" type="password" placeholder="Passord" required="required" />
-        <button className="loginButton"><div className="buttonText">Logg inn</div></button>
-      </form>
+        <button className="loginButton" onClick={this.handleSubmit}><div className="buttonText">Logg inn</div></button>
+      </div>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  changePage: () => push('/about-us')
-}, dispatch)
+const mapStateToProps = (state) => {
+  return {
+    isLoading: state.auth.isLoading,
+    hasErrored: state.auth.hasErrored,
+    user: state.auth.user,
+    mail: state.loginMail,
+    formOptions: state.loginOptions,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changePage: () => push('/admin'),
+    postUser: (username, password) => dispatch(postUser(username, password)),
+    postCurrent: () => dispatch(postCurrent()),
+    loginMail: mail => dispatch(loginMail(mail)),
+  };
+};
+
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login)

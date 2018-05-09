@@ -30,7 +30,7 @@ const composedEnhancers = compose(
 const store = createStore(
   rootReducer,
   initialState,
-  composedEnhancers
+  composedEnhancers,
 )
 
 export default store
