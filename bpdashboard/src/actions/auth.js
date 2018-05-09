@@ -70,7 +70,7 @@ export function loginResetFormOptions() {
 export function postUser(username, password) {
   return (dispatch) => {
     dispatch(postUserLoading(true));
-    return axios.post(API_ADDRESS + '/api/user/login', {
+    return axios.post(API_ADDRESS + '/api/admin/login', {
       Email: username,
       Password: password,
     })
