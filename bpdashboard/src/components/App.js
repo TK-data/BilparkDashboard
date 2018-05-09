@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Login from './login/Login';
 import LoginTest from './login2/Logintest';
 import logo from './car.png';
