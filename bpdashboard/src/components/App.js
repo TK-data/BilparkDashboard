@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import logo from './car.png';
-import './../styles/App.css';
+import { Route } from 'react-router-dom';
 import Login from './login/Login';
+import Cars from './cars/Cars';
+import './../styles/App.css';
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Velkommen til Bilparken!</h1>
-        </header>
-        <div className="App-intro">
-          <Login/>
-        </div>
+        <main>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/admin" component={Cars} />
+        </main>
       </div>
     );
   }
