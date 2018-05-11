@@ -3,6 +3,7 @@ import { push } from 'react-router-redux';
 
 const axios = require('axios');
 
+axios.defaults.withCredentials = true;
 
 export const POST_USER_REQUEST = 'POST_USER_REQUEST';
 export const POST_USER_SUCCESS = 'POST_USER_SUCCESS';
