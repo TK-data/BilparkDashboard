@@ -1,4 +1,4 @@
-import {API_ADDRESS} from '../config/connections';
+import { API_ADDRESS } from '../config/connections';
 
 export const GET_CARS_REQUEST = '_CARS_REQUEST';
 export const GET_CARS_SUCCESS = 'GET_CARS_SUCCESS';
