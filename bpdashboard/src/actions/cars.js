@@ -34,7 +34,6 @@ export function getCars() {
     dispatch(getCarsLoading(true));
     return axios.get(API_ADDRESS + '/api/car')
       .then((response) => {
-        console.log(response);
         if (!response.ok && !response.data) {
           dispatch(getCarsFailure('oi, Noe gikk galt...'));
         }
