@@ -1,0 +1,33 @@
+.car-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.car-intro{
+  font-size: 50px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.cars-elements{
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.car-box{
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6px;
+}
+.car-text{
+  margin-left: 40px;
+}
