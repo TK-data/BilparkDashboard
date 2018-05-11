@@ -43,4 +43,3 @@ export function getCars() {
       .catch(() => dispatch(getCarsFailure('oi, Noe gikk galt...!')));
   };
 }
-// dispatch(getCarsSuccess(JSON.stringify(response.data)));
