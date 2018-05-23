@@ -46,6 +46,9 @@ Open up ```app-env``` and edit the variables to the correct values for your DSM 
 
 To add these variables to the enviroment, open up console at the backend folder, and execute ```source app-env```
 
+### React Native Application
+To run the Application, go to https://github.com/TK-data/BilparkApp and follow the instructions.
+
 ### Dashboard React Application
 Describe steps to setup and run the dashboard application.
 
