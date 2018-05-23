@@ -6,7 +6,6 @@ NTNU Course IT2901 (Bachelorproject) repository for group 15 with the task TK_DA
 * [Overview](#overview)
 * [Run Application](#run-application)
 * [Development Setup](#development-setup)
-* [React Native App Description](#react-native-app-description)
 * [React Dashboard Description](#react-dashboard-description)
 * [Database](#database)
 * [Sails.js Backend](#sailsjs-backend-description)
@@ -24,6 +23,10 @@ Steps to run our product package as a end-user.
 ## Development Setup
 Do the following steps to set up and run the application for development. To make the application work properly, the backend has to be up and running.
 ### Backend
+First you need to clone https://github.com/TK-data/it2901-15.
+```
+git clone https://github.com/TK-data/it2901-15.git
+```
 Install sails globally for the sails command to work:
 ```
 npm i -g sails
@@ -42,30 +45,30 @@ Open up ```app-env``` and edit the variables to the correct values for your DSM 
 
 To add these variables to the enviroment, open up console at the backend folder, and execute ```source app-env```
 
-### React Native Application
-First point to the address of the machine that is running the backend:
-```
-goto BilparkApp\src\config
-duplicated connections.js.example and rename it connections.js
-edit the API_ADDRESS
-save
-```
-
-You need the [Expo app](https://expo.io) to run the app on mobile devices.
-```
-cd BilparkApp
-npm install
-npm start
-```
-Use the Expo app to scan the QR code shown in the terminal.
-
 ### Dashboard React Application
 Describe steps to setup and run the dashboard application.
 
+First point to the address of the machine that is running the backend:
+```
+go to bpdashboard\src\config
+duplicated connections.js.example and rename it connections.js
+edit the API_ADDRESS to where the backend is running
+save
+```
 
+Then run the Application from terminal
 
-## React Native App Description
-Components, containers, modules and other parts of the React Native "Mobile" Application.
+```
+cd bpdashboard
+npm Install
+npm start
+```
+
+The Dashboard will automatically open in your preferred browser.
+(If not, go to http://localhost:3000/)
+
+## React Dashboard Description
+Components, containers, modules and other parts of the React "Dashboard" Application.
 
 ### Containers/modules
 
@@ -75,9 +78,6 @@ Comp 1 description
 #### comp 2
 comp 2 description
 ### Service classes
-
-## React Dashboard Description
-Components, containers, modules and other parts of the React "Dashboard" Application.
 
 ## Database
 We use [MySQL](https://www.mysql.com/) for the database. Set up your own MySQL database and use [TKdata_create-tables.sql](TKdata_create-tables.sql) to create all the tables you need for the project.
